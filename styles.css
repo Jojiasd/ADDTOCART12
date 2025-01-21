@@ -1,0 +1,138 @@
+/* Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Product Catalog */
+.product-catalog {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Ensure product cards are styled properly */
+.product-catalog {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    gap: 15px; /* Add space between cards */
+    scroll-snap-type: x mandatory; /* Snap scrolling for a smooth experience */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on touch devices */
+}
+
+.product-card {
+    flex: 0 0 auto;
+    width: 200px; /* Adjust width as needed */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.product-info {
+    margin-top: 10px;
+}
+
+.add-to-cart {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #218838;
+}
+
+/* Optional: Add a horizontal scrollbar for larger screens */
+.product-catalog::-webkit-scrollbar {
+    height: 8px;
+}
+
+.product-catalog::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.product-catalog::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
+/* Cart Page */
+.cart {
+    padding: 20px;
+    text-align: center;
+}
+
+#cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#total-price {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#checkout {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
